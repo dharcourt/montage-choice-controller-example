@@ -2,21 +2,80 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            },
+            "bindings": {
+                "card": {"<-": "@deck:iteration.object"}
+            }
+        },
+        "card1": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card1"}
+            }
+        },
+        "choice": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "choice"}
+            }
+        },
+        "deck": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "deck"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.cards"}
+            }
+        },
+        "isEmptyChoiceAllowed": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "isEmptyChoiceAllowed"},
+                "checked": true
+            }
+        },
+        "isMultipleChoiceAllowed": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "isMultipleChoiceAllowed"},
+                "checked": true
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <div>
+            <ul data-montage-id="deck">
+                <li data-montage-id="card"></li>
+            </ul>
+        </div>
+        <div>
+            <input type="checkbox" data-montage-id="isMultipleChoiceAllowed">
+            <input type="checkbox" data-montage-id="isEmptyChoiceAllowed">
+        </div>
+        <div>
+            <ul data-montage-id="choice">
+                <li data-montage-id="card1"></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
