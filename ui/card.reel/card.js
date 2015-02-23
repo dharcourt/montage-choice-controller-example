@@ -1,8 +1,8 @@
 var AbstractCheckbox = require("montage/ui/base/abstract-checkbox").AbstractCheckbox;
 
-exports.Checkbox = AbstractCheckbox.specialize(/** @lends Checkbox */{
+exports.Card = AbstractCheckbox.specialize(/** @lends Card */{
     constructor: {
-        value: function Checkbox() {
+        value: function Card() {
             this.super();
         }
     }

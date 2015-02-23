@@ -1,4 +1,4 @@
-.digit-Checkbox {
+.card {
     position: relative;
     display: inline-block;
     -moz-box-sizing: border-box;
@@ -13,7 +13,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.digit-Checkbox:after {
+.card:after {
     position: absolute;
     content: "";
     top: -16px;
@@ -25,12 +25,12 @@
 
 /* States --------------------- */
 
-.digit-Checkbox.montage--active,
-.digit-Checkbox.montage-Checkbox--checked {
+.card.montage--active,
+.card.montage-Checkbox--checked {
     background-color: currentColor;
 }
 
-.digit-Checkbox.montage-Checkbox--disabled {
+.card.montage-Checkbox--disabled {
     opacity: .5;
     border-style: dashed;
     pointer-events: none;
@@ -39,15 +39,15 @@
 
 /* Icon --------------------- */
 
-.digit-Checkbox-icon {
+.card-icon {
     fill: transparent;
 }
 
-.digit-Checkbox.montage-Checkbox--checked .digit-Checkbox-icon {
+.card.montage-Checkbox--checked .card-icon {
     fill: inherit;
 }
 
-.digit-Checkbox.montage--active .digit-Checkbox-icon {
+.card.montage--active .card-icon {
     fill: transparent;
 }
 
@@ -55,13 +55,13 @@
 
 /* Wireframe ---------------------------------------------------------- */
 
-[data-montage-skin="wireframe"] .digit-Checkbox {
+[data-montage-skin="wireframe"] .card {
     fill: #4D4D4D;
     border-color: #b3b3b3;
     background-color: #f2f2f2;
 }
 
-[data-montage-skin="wireframe"] .digit-Checkbox.montage--active {
+[data-montage-skin="wireframe"] .card.montage--active {
     background-color: #e5e5e5;
 }
 
@@ -69,7 +69,7 @@
 
 /* Light ---------------------------------------------------------- */
 
-[data-montage-skin="light"] .digit-Checkbox {
+[data-montage-skin="light"] .card {
     fill: hsla(0,0%,0%,.7);
     border-color: hsl(0,0%,80%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
@@ -79,8 +79,8 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
-[data-montage-skin="light"] .digit-Checkbox.montage--active,
-[data-montage-skin="light"] .digit-Checkbox.montage-Checkbox--checked {
+[data-montage-skin="light"] .card.montage--active,
+[data-montage-skin="light"] .card.montage-Checkbox--checked {
     border-color: hsla(0,0%,70%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
     background-image: -moz-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
@@ -93,7 +93,7 @@
 
 /* Dark ---------------------------------------------------------- */
 
-[data-montage-skin="dark"] .digit-Checkbox {
+[data-montage-skin="dark"] .card {
     fill: hsl(0,0%,80%);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
@@ -103,8 +103,8 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
 }
 
-[data-montage-skin="dark"] .digit-Checkbox.montage--active,
-[data-montage-skin="dark"] .digit-Checkbox.montage-Checkbox--checked {
+[data-montage-skin="dark"] .card.montage--active,
+[data-montage-skin="dark"] .card.montage-Checkbox--checked {
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,20%), hsl(0,0%,16%) );
     background-image: -moz-linear-gradient(top, hsl(0,0%,20%), hsl(0,0%,16%) );
